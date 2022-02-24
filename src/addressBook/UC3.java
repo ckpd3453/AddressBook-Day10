@@ -51,14 +51,26 @@ class AddBook
 			String email =scanner.nextLine();
 			contacts.add(email);
 			
-			//Printing ArrayList
-			System.out.println("Contact Added");
-			System.out.println(contacts);
+			System.out.println("Enter the first name of contact you want to edit :");
+			String fn1= scanner.nextLine();
+			
+			
+			if (fn1 .equals(fn) )
+			{
+				dataAdd();
+			}
+			else
+			{
+				System.out.println("NO contact exists by this name");
+			}
+
+			System.out.println("Edited Contacts: "+contacts);
+			
 		}
 	}
 }
 
-public class UC2 {
+public class UC3 {
 
 	public static void main(String[] args) 
 	{
