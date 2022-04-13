@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class AddServices {
-	ArrayList<AddContact> contacts = new ArrayList<AddContact>();
+	ArrayList<AddContact> contacts = new ArrayList<AddContact>(); //ArrayList
 	Scanner s = new Scanner(System.in);
 
 	public void numberOfTimes() {
@@ -16,7 +16,7 @@ public class AddServices {
 		}
 	}
 
-	public void addPerson() {
+	public void addPerson() {			//To add contact
 
 		System.out.println("Enter the first name: ");
 		String firstName = s.next();
@@ -47,7 +47,7 @@ public class AddServices {
 
 	}
 
-	public void display() {
+	public void display() { 			//To display contact
 
 		System.out.println(contacts);
 	}
@@ -69,7 +69,7 @@ public class AddServices {
 		if (duplicate == 1) {
 			return temp;
 
-		} else if (duplicate > 1) {
+		} else if (duplicate > 1) {						//conditions to check multiple contact by the same name
 			System.out.print(" There are multiple contacts with given name.\n Please enter their email id: ");
 			String email = s.next();
 			for (AddContact contact : contacts) {
@@ -84,7 +84,7 @@ public class AddServices {
 		return temp;
 	}
 
-	public void edit() {
+	public void edit() {					//To edit contact
 		AddContact contact = findContact();
 		System.out.println(
 				"1: To edit first name \n 2: To edit lastName \n 3: To edit address \n 4: To edit city \n 5: To edit state \n 6: To edit zip code \n 7: To edit Phone no. \n 8: To edit email ");
@@ -143,7 +143,7 @@ public class AddServices {
 		System.out.println("Contacts Updated: " + contact);
 	}
 
-	public void delete() {
+	public void delete() {							//to delete contact
 		AddContact contact = findContact();
 		contacts.remove(contact);
 		System.out.println("Updated Phone Book: \n" + contacts);

@@ -1,7 +1,7 @@
 package addressBook;
 
 public class AddContact {
-
+	
 	private String firstName;
 	private String lastName;
 	private String address;
@@ -10,8 +10,11 @@ public class AddContact {
 	private int zipNo;
 	private long phoneNo;
 	private String email;
-
-	public AddContact(String firstName, String lastName, String address, String city, String state, int zipNo,
+	
+	/*
+	 * made parameterized constructor
+	 */ 
+	 	public AddContact(String firstName, String lastName, String address, String city, String state, int zipNo,
 			long phoneNo, String email) {
 		super();
 		this.firstName = firstName;
@@ -24,6 +27,9 @@ public class AddContact {
 		this.email = email;
 	}
 
+	/*
+	 * getter-setter
+	 */
 	public String getFirstName() {
 		return firstName;
 	}
@@ -88,6 +94,9 @@ public class AddContact {
 		this.phoneNo = phoneNo;
 	}
 
+	/*
+	 * for format to get output
+	 */
 	@Override
 	public String toString() {
 		return "\n AddContact [firstName=" + firstName + ", lastName=" + lastName + ", address=" + address + ", city="
